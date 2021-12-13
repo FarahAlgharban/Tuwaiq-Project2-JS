@@ -6,6 +6,4 @@ const {
 } = require('../controllers/permissions')
 permissionsRouter.get('/', getAllPermessions);
 permissionsRouter.post('/:id', putPermession);
-module.exports = {
-    permissionsRouter
-}
+module.exports = {permissionsRouter}

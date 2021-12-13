@@ -1,13 +1,13 @@
-
 const users = [
   {
     id:1,
     nationalId: "1010",
-    firstName: "Nada Mana",
+    firstName: "Nada",
     lastName:"AlRaghieb",
     password: "994",
     userInfo: [
-      {
+    
+      {  
         name: "Driving_Licenses",
         image:"./img/drive.png",
         data: [
@@ -17,21 +17,22 @@ const users = [
             releaseDate: "27/02/2019",
             expiryDate: "20/02/2022",
           },
+          
         ],
       },
       {
         name: "Vehicles",
-        image: `./img/vehicles.jpg`,
+        image: `./img/vehicles.png`,
         data: [],
       },
       {
         name: "Vehicles_Insurance",
-        image: `./img/vehicles.jpg`,
+        image: `./img/vehicles.png`,
         data: [],
       },
       {
         name: "Traffic_Violations",
-        image: `./img/traffic.jpg`,
+        image: `./img/traffic.png`,
         data: [],
       },
       {
@@ -106,17 +107,17 @@ const users = [
       },
       {
         name: "Vehicles",
-        image: `./img/vehicles.jpg`,
+        image: `./img/vehicles.png`,
         data: [],
       },
       {
         name: "Vehicles_Insurance",
-        image: `./img/vehicles.jpg`,
+        image: `./img/vehicles.png`,
         data: [],
       },
       {
         name: "Traffic_Violations",
-        image: `./img/traffic.jpg`,
+        image: `./img/traffic.png`,
         data: [],
       },
       {
@@ -147,6 +148,7 @@ const users = [
             unitNumber: "10",
             shortTitle: "MJCN5263",
           },
+          
         ],
       },
       {
@@ -160,6 +162,7 @@ const users = [
           appointmentNumber: "123498862",
           notes: "...",
         },
+        
       ],
       },
     ],
@@ -181,21 +184,22 @@ const users = [
             releaseDate: "04/05/2017",
             expiryDate: "20/02/2022",
           },
+          
         ],
       },
       {
         name: "Vehicles",
-        image: `./img/vehicles.jpg`,
+        image: `./img/vehicles.png`,
         data: [],
       },
       {
         name: "Vehicles_Insurance",
-        image: `./img/vehicles.jpg`,
+        image: `./img/vehicles.png`,
         data: [],
       },
       {
         name: "Traffic_Violations",
-        image: `./img/traffic.jpg`,
+        image: `./img/traffic.png`,
         data: [],
       },
       {
@@ -210,6 +214,7 @@ const users = [
             dateE:"08/06/2017",
             statues:"Available"
           }
+
         ],
       },
       {
@@ -258,5 +263,6 @@ const users = [
       },
     ],
   },
+  
 ];
 module.exports = { users };

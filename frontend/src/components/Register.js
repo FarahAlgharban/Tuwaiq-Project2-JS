@@ -3,7 +3,9 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import {Link} from 'react-router-dom';
+
 export default function Register() {
+
   return (
     <div className="Register">
       <img
@@ -25,7 +27,6 @@ export default function Register() {
             "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
         }}
       >
-      
         <Card.Body>
           <Form >
             <Form.Group size="lg" controlId="email">
@@ -43,6 +44,8 @@ export default function Register() {
                 autoFocus
                 type="nationalId"
                 placeholder="Enter nationalId"
+
+
               />
             </Form.Group>
             <Form.Group size="lg" controlId="password">
@@ -50,19 +53,22 @@ export default function Register() {
               <Form.Control
                 placeholder="New password "
                 type="password"
+
+
               /></Form.Group>
               <Form.Group size="lg" controlId="password">
               <Form.Label></Form.Label>
               <Form.Control
                 placeholder="Confirm the new password"
                 type="password"
+
+
               />
               <br></br>
               <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 <Form.Check type="checkbox" label="remember me" />
               </Form.Group>
             </Form.Group>
-            
             <br></br>
             <Link to="/">
             <Button
@@ -70,6 +76,7 @@ export default function Register() {
               size="lg"
               type="submit"
               style={{ backgroundColor: "#2EAFA1", width: "300px", marginLeft: "19px" }}
+
             >
               Register
             </Button></Link>

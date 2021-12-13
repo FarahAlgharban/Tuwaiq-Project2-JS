@@ -29,7 +29,7 @@ style={{
                  <Form>
                   <Form.Label style={{ fontSize: "25px", marginLeft: "35px"}}> Notifications </Form.Label><br></br>
                   <br></br>
-                
+
                 <Button
                     variant="secondary"
                     style={{

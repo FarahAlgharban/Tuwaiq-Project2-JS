@@ -9,10 +9,9 @@ import {
   FormGroup,
 } from "react-bootstrap";
 import axios from "axios";
-import Header from './header/Header';
 import "./Permits.css";
+import Header from "./header/Header";
 import Footer from "./footer/Footer";
-import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Permits() {
   const [Permits, setPermits] = useState({});
   const [type, setType] = useState("");
@@ -20,24 +19,9 @@ export default function Permits() {
   const [numberOfPeople, setNumberOfPeople] = useState(0);
   function handleClick(e) {
     e.preventDefault();
-   
-    
-  const obj= {type: type, place: place, numberOfPeople: numberOfPeople}
-  const data =JSON.parse( localStorage.getItem("Permits"))
-  if(data!== null){
-    data.push(obj);
-
-    localStorage.setItem("Permits",JSON.stringify(data));
-
-  }else{
-
-    let newPermits=[];
-    newPermits.push(obj)
-    localStorage.setItem("Permits",JSON.stringify(newPermits))
-  }
     axios({
       method: "post",
-      url: "/permissions/1012",
+      url: "/permissions/1010",
       data: {
         type: type,
         place: place,
@@ -45,23 +29,18 @@ export default function Permits() {
       },
     })
       .then((response) => {
-        
         console.log(response);
-     
         setPermits(response.data.id);
         console.log(Permits);
       })
       .catch((error) => {
-        
         console.log(error);
       });
-    }
-
+  }
   return (
     <div>
-      <Header/>
-      
-      <h1 style={{marginLeft: "7rem",color:"#2EAFA1", marginBottom: "50px", marginTop: "30px"}}> Permits </h1>
+       <Header/>
+      <h1 style={{marginLeft: "7rem",color:"#2EAFA1", marginBottom: "50px", marginTop: "30px"}}> Permitsst </h1>
       <Container
         style={{
           marginTop: "30px",marginLeft: "100px", padding: "40px",
@@ -92,12 +71,10 @@ export default function Permits() {
                       onClick={() => setType("Commercial")}
                     />
                     <Form.Check
-                    
                       inline
                       label="Personal"
                       type={type}
                       id={`inline-${type}-3`}
-                      
                       onClick={() => setType("Personal")}
                     />
                     <br></br>
@@ -114,18 +91,17 @@ export default function Permits() {
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label> Place Name </Form.Label>{" "}
                   <Form.Control
-                  style={{width: "47rem"}}
                     type="text"
+                    style={{width: "47rem"}}
                     placeholder="Place name"
                     onChange={(e) => setPlace(e.target.value)}
                   />
                 </Form.Group>{" "}
-                <Form.Group
-                className="mb-3" controlId="formBasicEmail">
-                  <Form.Label > Number of expected Visitors </Form.Label>{" "}
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                  <Form.Label> Number of expected Visitors </Form.Label>{" "}
                   <Form.Control
-                  style={{width: "47rem"}}
                     type="text"
+                    style={{width: "47rem"}}
                     placeholder="Number of expected Visitors"
                     onChange={(e) => setNumberOfPeople(e.target.value)}
                   />
@@ -147,7 +123,7 @@ export default function Permits() {
           </Col>
         </Row>
       </Container>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

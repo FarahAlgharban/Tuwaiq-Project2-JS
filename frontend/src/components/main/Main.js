@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './Main.css';
+import './main.css';
 import { Col, Row, Container, Card, Button } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import family from '../img/family.png';
@@ -9,7 +9,9 @@ import qr from '../img/qr.png';
 import barcode1 from '../img/barcode1.png';
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
+
 export default function Main() {
+
   const [nationalId, setId] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName,setLastName] = useState("");
@@ -24,12 +26,12 @@ export default function Main() {
       setLastName(info.lastName);
     })();
   });
+
     return (
       <div>
         <Header/>
         <br></br>
         <Container>
-      
           <Row>
             <Col xs={6} md={3}>
               <Card id="green" border="success" style={{ width: '19rem', border: 'black 2px', borderRadius: '7px', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' }}>
@@ -43,12 +45,16 @@ export default function Main() {
               </Col>
             <Col xs={6} md={6} style={{  border: 'black 2px', borderRadius: '7px', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' }}>
               <Row>
+
+
+
                 <Col xs={6}>
-                <h6 style={{ margin:"30px"}}>Name</h6> <h1 style={{fontSize:"20px" ,margin:"30px"}}> {firstName} {lastName}</h1>
+                <h6 style={{ margin:"30px"}}>Name</h6> <h1 style={{fontSize:"20px" ,margin:"30px"}}>{firstName} {lastName}</h1>
                 </Col>
                 <Col xs={6}>
                 <h6 style={{margin:"30px"}}>National ID Number </h6> <h1 style={{fontSize:"20px",margin:"30px"}}>{nationalId}</h1>
                 </Col>
+
               </Row>
             </Col>
             <Col xs={6} md={3}>
@@ -94,7 +100,7 @@ export default function Main() {
   </Col>
 </Row>
         </Container>
-       
+
 <Footer/>
       </div>
     )

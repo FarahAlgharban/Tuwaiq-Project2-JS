@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import {Link} from 'react-router-dom';
 import { useNavigate } from "react-router";
+import './login.css';
 import axios from "axios";
 export default function Login() {
   const [nationalId, setNationalId] = useState("");
@@ -30,51 +31,20 @@ export default function Login() {
       })
       .catch((err) => {
         console.log(err);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         alert("Not found")
->>>>>>> parent of bee75e1 (changes)
-=======
->>>>>>> parent of cf1740c (projed2tw)
-=======
-        alert("Not found")
->>>>>>> parent of 3436c37 (Revert "projed2tw")
       });
   }
   return (
     <div className="Login">
-      <img
-        src="https://tawakkalna.sdaia.gov.sa/assets/img/illustrations/twlogo.png"
-        style={{
-          width: "15rem",
-          marginLeft: "40rem",
-          marginBottom: "20px",
-          marginTop: "10px",
-          padding: "30px",
-        }}
-      />
-      <Card
-        style={{
-          width: "23rem",
-          marginLeft: "35rem",
-          borderRadius: "2px",
-          boxShadow:
-            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-        }}
-      >
-       
+      <img className="imgTwaLogin"
+        src="https://tawakkalna.sdaia.gov.sa/assets/img/illustrations/twlogo.png"/>
+      <Card className="cardTwaLogin">
         <Card.Body>
           <Form onSubmit={handleSubmit}>
             <Form.Group size="lg" controlId="email">
-              <Form.Label
-               style={{ marginLeft: "3px", marginBottom: "30px"}}
-              >Login</Form.Label>
+              <Form.Label className="LabelTwaLogin">Login</Form.Label>
               <Link to="/Register">
-              <Card.Link
-                style={{ marginLeft: "13rem", color: "#2EAFA1", marginTop: "20px" }}
-              >
+              <Card.Link className="LinkTwaLogin">
                 Sign Up
               </Card.Link></Link>
               <Form.Control
@@ -98,13 +68,12 @@ export default function Login() {
                 <Form.Check type="checkbox" label="remember me" />
               </Form.Group>
             </Form.Group>
-           
             <br></br>
             <Button
+            className="buttonTwaLogin"
              variant="success"
               size="lg"
               type="submit"
-              style={{ backgroundColor: "#2EAFA1", width: "300px", marginLeft: "19px" }}
               disabled={!validateForm()}
             >
               Next

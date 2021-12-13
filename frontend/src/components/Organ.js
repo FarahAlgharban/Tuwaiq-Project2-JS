@@ -1,13 +1,6 @@
 import Header from './header/Header';
 import Footer from "./footer/Footer";
-import {   
-    Card,
-    Col,
-    Container,
-    Row,
-    Form,
-    Button,
-    FormGroup, } from 'react-bootstrap';
+import {Container,Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react'
 
@@ -16,7 +9,7 @@ export default function Organ() {
         <div>
              <Header/>
             <hr></hr>
-            
+
             <h3 style={{  marginLeft: "6rem",color:"black", marginBottom: "50px", marginTop: "30px"}}> Organ Donation </h3>
       <Container
         style={{
@@ -24,12 +17,12 @@ export default function Organ() {
           boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
         }}
       > <h6 style={{color: "grey"}}> OrganDonationTerms </h6>
-            
+
 </Container>
 <br></br>
 <br></br>
 
- 
+
 <Button 
                     variant="outline-danger"
                     style={{

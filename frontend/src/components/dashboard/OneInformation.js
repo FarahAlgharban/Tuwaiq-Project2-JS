@@ -5,7 +5,8 @@ import "../dashboard/dashboard.css";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import {Link} from 'react-router-dom';
-import  "./OneInfo.css"
+import './OneInfo.css'
+
 export default function OneInformation() {
   const params = useParams();
   const name = params.name;
@@ -26,7 +27,7 @@ export default function OneInformation() {
         <Row md={3} className="card1">
           <Col >
           <Link to="/cardDash">
-          <h6 style={{marginLeft: "20px"}}> Dashboard >> </h6></Link>
+          <h6 style={{marginLeft: "20px"}}> Dashboard {">>"} </h6></Link>
             {data &&
               data.map((elem) => {
                 console.log(name);
@@ -180,6 +181,7 @@ export default function OneInformation() {
                     </Card>
                   );
                 }
+
                 else {
                   return (
                     <Card className="card12">

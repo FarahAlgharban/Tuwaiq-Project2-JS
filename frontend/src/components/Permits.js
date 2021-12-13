@@ -1,4 +1,3 @@
-
 import { Component } from "react";
 import React, { useState, useEffect } from "react";
 import './Permits.css';
@@ -11,13 +10,9 @@ import medical from './img/medical.png';
 import sport from './img/sport.png';
 import gathering from './img/gathering.png';
 import help from './img/help.png';
-
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
-
-
 import MyPerCard from "./MyPerCard";
-
 
     export default function Permits() {
         const [data, setData] = useState(null);
@@ -25,15 +20,14 @@ import MyPerCard from "./MyPerCard";
           (async () => {
             const response = await fetch("/permissions");
             const data = await response.json();
-            const info = data.find((user) => user.userId === "1012");
+            const info = data.find((user) => user.userId === "1010");
             setData(info.permission);
           })();
         }, []);
-    
         return (
             <div>
-                  <Header/>
-    
+               <Header/>
+
 <Container>
 <h1>Permits</h1>
   <Row>
@@ -44,7 +38,7 @@ import MyPerCard from "./MyPerCard";
         <h5> Supplies </h5>
         <h6> Request permit for supplies </h6>
         </div>
-        <h1> > </h1>
+        <h1>{" > "}</h1>
 </Card>
     </Col>
 <Col>
@@ -54,7 +48,7 @@ import MyPerCard from "./MyPerCard";
         <h5> Temporary permit <br></br>for a driver </h5>
         <h6> This service is only available to work or student permit holders </h6>
         </div>
-        <h1> > </h1>
+        <h1>{" > "}</h1>
 </Card>
 </Col>
     <Col>
@@ -64,8 +58,8 @@ import MyPerCard from "./MyPerCard";
         <h5> Emergency Medical Permit </h5>
         <h6> This service is only for medical emergencies </h6>
         </div>
-    <h1> > </h1>
-     
+    <h1> {">"} </h1>
+
 </Card>
     </Col>
     </Row>
@@ -79,7 +73,7 @@ import MyPerCard from "./MyPerCard";
         <h5> Permit to Practice Walking </h5>
         <h6> This service is for jogging permit in the authorized range </h6>
         </div>
-        <h1> > </h1>
+        <h1>{">"} </h1>
 </Card>  
   </Col>
 <Col>
@@ -89,20 +83,19 @@ import MyPerCard from "./MyPerCard";
         <h5> Humanitarian Cases </h5>
         <h6> Submit a request for humanitarian case </h6>
         </div>
-        <h1> > </h1>
+        <h1> {">"} </h1>
 </Card>
     </Col>
     <Col>
     <Link to ="/permissons" style={{textDecoration:'none ', color:'black'}}>
     <Card className="Card" style={{ border: 'black 2px', borderRadius: '7px', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' }}>
         <img className="myImg" src={gathering} alt="" />
-        <div style={{textAlign: "left", marginRight: "50px", marginLeft: "20px"}}> 
+        <div style={{textAlign: "left", marginRight: "50px", marginLeft: "20px"}}>
         <h5> Auto health status verification permits </h5>
         <h6> This permit is intended for officials of places where there is a gathering </h6>
         </div>
-        <h1> > </h1>
+        <h1> {">"} </h1>
 </Card></Link>
-
     </Col>
     </Row>
 </Container>
@@ -123,8 +116,6 @@ import MyPerCard from "./MyPerCard";
                   <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
                 </svg>{" "}
                 Current Permits
-
-
               </h6>
               {data !== 0 ? (
                 <Row md={4}>
@@ -165,5 +156,4 @@ import MyPerCard from "./MyPerCard";
       <Footer/>
     </div>
   );
-           
-    }
+    } 

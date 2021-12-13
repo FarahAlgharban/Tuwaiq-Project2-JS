@@ -7,7 +7,7 @@ function AlertDismissibleExample() {
     const nav = useNavigate();
     if (show) {
       return (
-        
+
         <Alert variant="light" style={{margin: "200px", marginTop: "20px"}} onClose={() => setShow(false)} onClick={()=> nav('/main')}  dismissible>
           <Alert.Heading>Health Condition </Alert.Heading>
           <hr></hr>
@@ -22,5 +22,4 @@ function AlertDismissibleExample() {
     }
     return;
   }
-
   export default AlertDismissibleExample;
